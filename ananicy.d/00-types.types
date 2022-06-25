@@ -14,18 +14,18 @@
 
 ### Generic Types
 
-{"type":"archiver", "nice":19, "ionice":7}
+{"type":"archiver", "nice": 5}
 
 {"type":"audio-server", "nice":-11, "ioclass":"realtime"}
 
-{"type":"chat"}
+{"type":"chat", "nice": -2}
 
 {"type":"compiler", "nice":1}
 
-{"type":"database"}
+{"type":"database", "nice": 2}
 
 # desktop environment, window manager or any integral part of a desktop
-{"type":"DEWM"}
+{"type":"DEWM", "nice": -1}
 
 {"type":"document-editor"}
 
@@ -35,10 +35,10 @@
 
 {"type":"file-manager"}
 
-{"type":"file-sync"}
+{"type":"file-sync", "nice": 2, "sched":"idle", "ioclass":"idle"}
 
 # Increasing some games' niceness value may cause a crash
-{"type":"game"}
+{"type":"game", "nice": -10}
 {"type":"game,nice=-20", "nice":-20}
 {"type":"game,nice=-20,ionice=0", "nice":-20, "ionice":0}
 
@@ -48,30 +48,34 @@
 
 {"type":"image-viewer"}
 
-{"type":"music-player"}
+{"type":"music-player", "nice": -3}
 
-{"type":"p2p-client", "nice":1, "ionice":1}
+{"type":"p2p-client", "nice": 2, "sched":"idle", "ioclass":"idle"}
 
-{"type":"package-manager"}
+{"type":"package-manager", "nice": 4}
 
 {"type":"remote-desktop"}
 
-{"type":"server", "nice":1, "ionice":1}
+{"type":"server", "nice":10, "ionice":1}
 
-{"type":"service"}
+{"type":"service", "nice": 10}
 {"type":"service,nice=19,ionice=7", "nice":19, "ionice":7}
 
 {"type":"screenshotter"}
 
 {"type":"terminal"}
 
-{"type":"video-player"}
+{"type":"video-player", "nice": -3}
 
 {"type":"VPN"}
 
 {"type":"VM"}
 
-{"type":"web-browser"}
+{"type":"web-browser", "nice": -10}
+
+### Specific Types
+
+{"type":"ionice=3", "ionice":3}
 
 ########################
 ### Depricated types ###
